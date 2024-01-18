@@ -60,7 +60,7 @@ class FileStorage:
 
     def delete(self, obj=None):
         """
-        public instance method to delete obj from 
+        public instance method to delete obj from
         __objects which is a dictionary
         obj: The object to be deleted. no action is taken if obj is None
         """
