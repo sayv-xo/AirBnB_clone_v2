@@ -4,12 +4,13 @@ from models.base_model import BaseModel, Base
 from sqlalchemy.orm import relationship
 from sqlalchemy import Column, String
 from os import getenv
+from models.city import City
 
 
 class State(BaseModel, Base):
     """ State class """
     __tablename__ = "states"
-    name = Column(String(60), nullable=False)
+    name = Column(String(128), nullable=False)
     cities = relationship("City", backref="state", cascade="delete")
 
     if getenv("HBNB_MYSQL_DB") != "db":
