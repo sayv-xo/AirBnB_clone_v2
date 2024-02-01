@@ -48,6 +48,7 @@ class DBStorage:
             objs.extend(self.__session.query(User).all())
             objs.extend(self.__session.query(Place).all())
             objs.extend(self.__session.query(Review).all())
+            objs.extend(self.__session.query(Amenity).all())
         else:
             objs = self.__session.query(cls).all()
         for obj in objs:
