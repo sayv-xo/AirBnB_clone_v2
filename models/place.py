@@ -7,6 +7,9 @@ from os import getenv
 import models
 from models.review import Review
 from models.amenity import Amenity
+from models.city import City
+from models.state import State
+from models.user import User
 
 
 association_table = Table("place_amenity", Base.metadata,
